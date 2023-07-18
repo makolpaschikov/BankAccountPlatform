@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+  SERVER:
+    container_name: bank_acc
+    image: bank_acc
+    build: ./
+    ports:
+      - "7575:7575"
+    #    command: [ 'java', '-jar', 'Server/build/libs/Server-0.0.1-SNAPSHOT.jar' ]
+
+    depends_on:
+      - DATABASE
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://DATABASE:5432/geo
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  DATABASE:
+    image: postgres
+    ports:
+      - "5444:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=bank_account
+    networks:
+      - psp_net
+
+networks:
+  psp_net:
+    driver: bridge
