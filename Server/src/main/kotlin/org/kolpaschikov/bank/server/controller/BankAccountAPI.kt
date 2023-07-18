@@ -32,7 +32,7 @@ interface BankAccountAPI {
     /**
      * Изменение баланса счета на определённое значение
      *
-     * @param balanceDto DTO с информацией о счете
+     * @param bankAccountDto DTO с информацией о счете
      */
     @PutMapping(consumes = [MediaType.APPLICATION_JSON_VALUE])
     @Operation(summary = "Изменение баланса на счете")

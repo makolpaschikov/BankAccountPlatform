@@ -3,7 +3,6 @@ package org.kolpaschikov.bank.server.service.bankAccount.opener
 import org.kolpaschikov.bank.server.domain.entity.BankAccountEntity
 import org.kolpaschikov.bank.server.exception.NotFoundBankAccountException
 import org.kolpaschikov.bank.server.repositroy.BankAccountRepository
-import org.kolpaschikov.bank.server.service.bankAccount.getter.AbstractBankAccountGetter
 import org.kolpaschikov.bank.server.service.bankAccount.getter.BankAccountGetter
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.cache.annotation.CachePut
