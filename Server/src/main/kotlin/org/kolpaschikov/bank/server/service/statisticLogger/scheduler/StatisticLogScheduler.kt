@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 
 @Configuration
 @EnableScheduling
-class StatisticLogSchedulerScheduler(private val statisticRuntimeLogger: StatisticRuntimeLogger) {
+class StatisticLogScheduler(private val statisticRuntimeLogger: StatisticRuntimeLogger) {
     @PostConstruct
     fun postConstruct() {
         statisticRuntimeLogger.writeStatisticToLog()
