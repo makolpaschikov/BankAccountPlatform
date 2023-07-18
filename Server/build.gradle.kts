@@ -30,7 +30,7 @@ dependencies {
     /* Database dependencies */
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.1.1")
     implementation("org.postgresql:postgresql:42.6.0")
-    implementation("org.flywaydb:flyway-core")
+//    implementation("org.flywaydb:flyway-core")
 
     /* Any */
     implementation("org.jetbrains.kotlin:kotlin-reflect")
