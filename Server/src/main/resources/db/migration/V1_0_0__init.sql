@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS balance
+CREATE TABLE IF NOT EXISTS bank_account
 (
     id     int PRIMARY KEY,
-    amount bigint
+    balance bigint
 );

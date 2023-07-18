@@ -6,12 +6,12 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "balance")
-data class BalanceEntity(
+@Table(name = "bank_account")
+data class BankAccountEntity(
         @Id
         @Column(name = "id", nullable = false)
-        private var id: Long? = null,
+        var id: Long,
 
-        @Column(name = "amount", nullable = false)
-        private var amount: Long? = null
+        @Column(name = "balance", nullable = false)
+        var balance: Long = 0
 )

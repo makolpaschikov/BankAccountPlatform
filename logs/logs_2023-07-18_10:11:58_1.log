@@ -1,0 +1,40 @@
+HV000001: Hibernate Validator 8.0.0.Final
+Starting ServerApplicationKt using Java 17.0.7 with PID 406964 (/home/user/repos/BankAccountPlatform/Server/build/classes/kotlin/main started by user in /home/user/repos/BankAccountPlatform)
+No active profile set, falling back to 1 default profile: "default"
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/10.1.10]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1192 ms
+Flyway Community Edition 9.16.3 by Redgate
+See release notes here: https://rd.gt/416ObMi
+
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11d1735e
+HikariPool-1 - Start completed.
+Database: jdbc:postgresql://localhost/bank_account (PostgreSQL 14.8)
+Schema history table "public"."flyway_schema_history" does not exist yet
+Successfully validated 2 migrations (execution time 00:00.011s)
+Creating Schema History table "public"."flyway_schema_history" ...
+Current version of schema "public": << Empty Schema >>
+Migrating schema "public" to version "1.0.0 - init"
+Migrating schema "public" to version "1.0.1 - default value for amount"
+Successfully applied 2 migrations to schema "public", now at version v1.0.1 (execution time 00:00.036s)
+HHH000204: Processing PersistenceUnitInfo [name: default]
+HHH000412: Hibernate ORM core version 6.2.5.Final
+HHH000406: Using bytecode reflection optimizer
+HHH000021: Bytecode provider name : bytebuddy
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH000021: Bytecode provider name : bytebuddy
+HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Starting ProtocolHandler ["http-nio-8080"]
+Tomcat started on port(s): 8080 (http) with context path ''
+Started ServerApplicationKt in 3.244 seconds (process running for 3.736)
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.

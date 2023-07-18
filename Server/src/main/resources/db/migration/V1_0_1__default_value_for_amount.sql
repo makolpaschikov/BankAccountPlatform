@@ -1,2 +1,2 @@
-ALTER TABLE balance
-    ALTER amount SET DEFAULT 0;
+ALTER TABLE bank_account
+    ALTER balance SET DEFAULT 0;
