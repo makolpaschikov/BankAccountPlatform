@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api/bank-Account")
+@RequestMapping("/api/bank-account")
 class BankAccountAPIImpl(
         private val bankAccountControllerFacade: BankAccountControllerFacade
 ) : BankAccountAPI {
