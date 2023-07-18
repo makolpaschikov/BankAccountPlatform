@@ -1,0 +1,5 @@
+flyway:
+  url: jdbc:postgresql://localhost/bank_account
+  user: postgres
+  password: postgres
+  schemas: public

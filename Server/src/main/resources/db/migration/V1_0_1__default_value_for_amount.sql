@@ -1,0 +1,2 @@
+ALTER TABLE balance
+    ALTER amount SET DEFAULT 0;

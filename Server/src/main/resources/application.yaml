@@ -1,0 +1,36 @@
+# SPRING
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/bank_account
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show-sql: false
+    show-sql: false
+#  flyway:
+#    url: jdbc:postgresql://localhost/bank_account
+#    user: postgres
+#    password: postgres
+#    schemas: public
+#    baseline-on-migrate: true
+
+
+# Server  errors
+server:
+  error:
+    include-message: always
+
+# SWAGGER
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
