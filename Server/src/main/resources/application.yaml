@@ -17,15 +17,6 @@ spring:
         format_sql: true
         show-sql: false
 
-
-
-#  flyway:
-#    url: jdbc:postgresql://localhost/bank_account
-#    user: postgres
-#    password: postgres
-#    schemas: public
-
-
 # Server  errors
 server:
   error:
