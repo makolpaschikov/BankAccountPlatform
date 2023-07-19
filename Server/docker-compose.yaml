@@ -7,18 +7,26 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=bank_accounttt
-
+      - POSTGRES_DB=bank_account_db
+    restart: always
+    volumes:
+      - habrdb-data:/var/lib/postgresql/data
   API:
     container_name: bank_acc
     image: bank_acc
     build: ./
     ports:
-      - "7575:7575"
+      - "8080:8080"
     depends_on:
       - PostgreSQL
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/bank_accounttt
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/bank_account_db
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    restart: always
+    volumes:
+      - ./logs:/Server/logs
+
+volumes:
+  habrdb-data:
